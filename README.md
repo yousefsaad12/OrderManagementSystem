@@ -47,8 +47,8 @@ Ensure you have Node.js and npm installed on your machine. Also, have PostgreSQL
 
 3. **API Endpoints:**
 
-   - `/users`: CRUD operations for users.
-   - `/products`: CRUD operations for products.
+   - `/users`: CR operations for users.
+   - `/products`: CR operations for products.
    - `/carts`: Operations related to shopping carts (e.g., adding/removing items).
    - `/orders`: Operations related to placing and managing orders.
 
