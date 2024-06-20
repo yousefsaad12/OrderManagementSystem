@@ -22,52 +22,81 @@
   <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
   [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
 
+# Order Management System
+
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+This project implements an order management system using NestJS, Prisma, and PostgreSQL. It includes functionalities for managing users, products, carts, and orders.
 
 ## Installation
 
-```bash
-$ npm install
-```
+Ensure you have Node.js and npm installed on your machine. Also, have PostgreSQL set up with appropriate permissions and a database created.
 
-## Running the app
+1. **Clone the repository:**
+   ```
+   git clone https://github.com/yourusername/order-management-system.git
+   ```
+2. **Navigate into the directory:**
+   ```
+   cd order-management-system
+   ```
+3. **Install dependencies:**
+   ```
+   npm install
+   ```
 
-```bash
-# development
-$ npm run start
+4. **Set up environment variables:**
 
-# watch mode
-$ npm run start:dev
+   Create a `.env` file in the root directory based on `.env.example` and provide your PostgreSQL database connection URL and any other necessary environment variables.
 
-# production mode
-$ npm run start:prod
-```
+5. **Run database migrations:**
+   ```
+   npx prisma migrate dev
+   ```
+   This command will apply the database schema defined in Prisma to your PostgreSQL database.
 
-## Test
+## Usage
 
-```bash
-# unit tests
-$ npm run test
+1. **Start the application:**
+   ```
+   npm run start:dev
+   ```
+   This command starts the NestJS application in development mode.
 
-# e2e tests
-$ npm run test:e2e
+2. **Access the API:**
 
-# test coverage
-$ npm run test:cov
-```
+   - Open a web browser or use an API client (e.g., Postman).
+   - The API endpoints will be available at `http://localhost:3000` (or another port specified).
 
-## Support
+3. **API Endpoints:**
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+   - `/users`: CRUD operations for users.
+   - `/products`: CRUD operations for products.
+   - `/carts`: Operations related to shopping carts (e.g., adding/removing items).
+   - `/orders`: Operations related to placing and managing orders.
 
-## Stay in touch
+## Testing
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+1. **Run tests:**
+   ```
+   npm test
+   ```
+   This command runs the tests for the project.
 
-## License
+2. **Test coverage:**
 
-Nest is [MIT licensed](LICENSE).
+   If using Jest for testing, you can check test coverage by running:
+   ```
+   npm test -- --coverage
+   ```
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute:
+
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/your-feature`).
+3. Make your changes.
+4. Commit your changes (`git commit -am 'Add new feature'`).
+5. Push to the branch (`git push origin feature/your-feature`).
+6. Create a new Pull Request.
